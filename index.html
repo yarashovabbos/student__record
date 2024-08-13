@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talabalar Ro'yxati</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stayl.css">
+</head>
+<body>  <div class="container">
+    <h2>Talabalar Ro'yxati</h2>
+    <button id="openModalBtn" class="btn btn-primary">Qo'shish</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="studentModalLabel">Yangi Talaba Qo'shish</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="studentForm">
+                        <!-- Form fields here -->
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">Ism</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Familiya</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Manzil</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="birthDate" class="form-label">Tug'ilgan Sana</label>
+                            <input type="date" class="form-control" id="birthDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="position" class="form-label">Pozitsiya</label>
+                            <input type="text" class="form-control" id="position" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="typePosition" class="form-label">Pozitsiya turi</label>
+                            <select class="form-select" id="typePosition">
+                                <option value="junior">Junior</option>
+                                <option value="middle">Middle</option>
+                                <option value="senior">Senior</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="salary" class="form-label">Oylik maosh</label>
+                            <input type="number" class="form-control" id="salary" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="isMarried" class="form-label">Oilaviy holat</label>
+                            <select class="form-select" id="isMarried">
+                                <option value="true">Ha</option>
+                                <option value="false">Yo'q</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Saqlash</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered mt-4">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Ism</th>
+                    <th>Familiya</th>
+                    <th>Manzil</th>
+                    <th>Tug'ilgan Sana</th>
+                    <th>Pozitsiya</th>
+                    <th>Pozitsiya turi</th>
+                    <th>Oylik maosh</th>
+                    <th>Oilaviy holat</th>
+                    <th>Harakatlar</th>
+                </tr>
+            </thead>
+            <tbody id="studentsList">
+                <!-- Students list will be rendered here -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="./dist/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
